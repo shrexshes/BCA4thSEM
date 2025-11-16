@@ -44,7 +44,7 @@ export const Auth = ({ children }) => {
             return { success: false, message: "Username already exists." }
         }
         users.push(userData)
-        localStorage.setItem('user', JSON.stringify(users))
+        localStorage.setItem('users', JSON.stringify(users))
         return { success: true, message: "User registered successfully" }
     }
 
