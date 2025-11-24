@@ -7,10 +7,10 @@ const Register = () => {
     const [password, setPassword] = useState('')
     const [message, setMessage] = useState('') //to show error or success message
     const { register } = useAuth()
-    const navigate=useNavigate();
+    const navigate = useNavigate();
 
     const handleRegister = (e) => {
-        e.preventDefault() 
+        e.preventDefault()
         const result = register({ username, password })
         if (result.success === true) {
             setMessage("Registration successful! redirecting to login..")
@@ -41,8 +41,8 @@ const Register = () => {
                     className='px-10 py-2 bg-gray-200 rounded-md'
                 />
                 {message && <p>{message}</p>}
-                <button className='bg-green-300 py-2 px-4 rounded-full text-black' 
-                 onClick={handleRegister}>Register</button>
+                <button className='bg-green-300 py-2 px-4 rounded-full text-black'
+                    onClick={handleRegister}>Register</button>
             </form>
         </div>
     )

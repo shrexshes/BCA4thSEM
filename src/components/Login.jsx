@@ -30,16 +30,16 @@ const Login = () => {
         <h2 className='font-sans text-2xl font-bold'>Login</h2>
         <input type='text' value={username} placeholder='username'
           onChange={(e) => setUsername(e.target.value)}
-          className='w-full p-2 bg-gray-200 rounded-md border border-gray-300'></input>
+          className='w-full p-2 bg-gray-200 rounded-md border border-gray-300' required></input>
         <input type='password' value={password} placeholder='password'
           onChange={(e) => setPassword(e.target.value)}
-          className='w-full p-2 bg-gray-200 rounded-md border border-gray-300'></input>
+          className='w-full p-2 bg-gray-200 rounded-md border border-gray-300' required></input>
         <button type='submit'
           className='text-sm bg-green-500 text-white px-4 py-2 rounded-full'>
           Login
         </button>
         <p className='text-white'>Don't have an account?
-          <a href='/register' className='text-blue-500 underline'>
+          <a href='/register' className='text-blue-500 underline'>Register
           </a></p>
         {error && <p className='text-red-700'>{error}</p>}
       </form>
